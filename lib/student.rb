@@ -6,7 +6,7 @@ require 'pry'
 class Student < InteractiveRecord
 
 def attr_accessor
-  binding.pry
+  #binding.pry
   self.column_names.each do |column_name|
     attr_accessor column_name.to_sym
   end
