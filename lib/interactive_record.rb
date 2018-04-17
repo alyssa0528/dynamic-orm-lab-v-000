@@ -23,10 +23,11 @@ class InteractiveRecord
   end
 
   def initialize(options = {})
+    binding.rpy
     options.each do |property, value|
       self.send("#{property} = ", value)
     end
   end
 
-  
+
 end
