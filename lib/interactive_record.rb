@@ -67,7 +67,7 @@ class InteractiveRecord
   #argument will be a key: value pair
   def self.find_by(attribute_hash)
     #binding.pry
-    sql = "SELECT * FROM #{table_name} WHERE #{attribute_hash.keys.first} = '#{attribute_hash.values.first}''"
+    sql = "SELECT * FROM #{table_name} WHERE #{attribute_hash.keys.first} = '#{attribute_hash.values.first}'"
     #binding.pry
     DB[:conn].execute(sql)
   end
