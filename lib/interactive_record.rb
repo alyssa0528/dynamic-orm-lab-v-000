@@ -45,6 +45,7 @@ class InteractiveRecord
     end
 
     values.join(", ")
+    binding.pry
   end
 
   #INSERT INTO table_name (column_name) VALUES value, value
