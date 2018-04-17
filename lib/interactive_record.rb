@@ -7,8 +7,11 @@ class InteractiveRecord
     self.to_s.downcase.pluralize
   end
 
-  def self.column_names #essentially the attr_accessors 
-  end 
+  def self.column_names #essentially the attr_accessors
+    DB[:conn].results_as_hash = true
+
+    sql = PRAGMA table_info('#{table_name}')
+  end
 
   def initialize
 
