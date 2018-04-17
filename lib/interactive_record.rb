@@ -37,5 +37,6 @@ class InteractiveRecord
     self.class.column_names.delete_if {|column_name| column_name == "id"}.join(", ")
   end
 
+  def 
 
 end
