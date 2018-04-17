@@ -11,13 +11,12 @@ class InteractiveRecord
     DB[:conn].results_as_hash = true
 
     sql = "PRAGMA table_info('#{table_name}')"
-    binding.pry
 
     table_info = DB[:conn].execute(sql)
     column_names = []
 
     table_info.each do |column|
-      column_names << column[]"name"]
+      column_names << column["name"]
     end
 
     column_names.compact
