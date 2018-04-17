@@ -29,6 +29,7 @@ class InteractiveRecord
     end
   end
 
+  #self = the instance. add #class and then call on #table_name instance method from above
   def table_name_for_insert
     self.class.table_name
   end
