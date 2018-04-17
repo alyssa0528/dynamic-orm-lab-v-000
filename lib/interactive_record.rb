@@ -41,11 +41,11 @@ class InteractiveRecord
     values = []
 
     self.class.column_names.each do |column_name|
-      values << "'#{send(column_name)}'" unless send(column_name).nil?
+      values << '#{send(column_name)}' unless send(column_name).nil?
     end
 
     values.join(", ")
-    binding.pry
+    #binding.pry
   end
 
   #INSERT INTO table_name (column_name) VALUES value, value
